@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "4.9.5",
     "@material-ui/icons": "4.9.1",
+    "fecha": "^4.2.0",
     "react": "16.13.0",
     "react-dom": "16.13.0",
     "react-scripts": "3.4.0"
@@ -31,6 +32,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^26.0.15",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2"
   }
