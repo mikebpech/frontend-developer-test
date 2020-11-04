@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App } from './App';
+import { findByTestAttr } from '../test/testUtils';
 
 describe('<App />', () => {
   let wrapper;
@@ -11,7 +12,13 @@ describe('<App />', () => {
 
   describe('render()', () => {
     it('renders the Box', () => {
-      expect(wrapper.find({ 'data-testid': 'app-box' })).toHaveLength(1);
+      const component = findByTestAttr(wrapper, 'app-box');
+      expect(component.length).toBeTruthy();
+    });
+
+    it('should render two diff tables', () => {
+      const component = findByTestAttr(wrapper, 'datatable');
+      expect(component.length).toBe(2);
     });
   });
 });
